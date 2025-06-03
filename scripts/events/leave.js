@@ -1,17 +1,25 @@
 module.exports.config = {
-  name: "leave",
+  name: "leavenoti",
   eventType: ["log:unsubscribe"],
-  version: "1.0.0",
+  version: "1.0.1",
   credits: "Rakib Boss",
-  description: "Sends a custom leave message when someone leaves the group"
+  description: "Custom leave message with proper user name"
 };
 
-module.exports.run = async ({ event, api, Users, Threads }) => {
+module.exports.run = async ({ event, api }) => {
   const moment = require("moment-timezone");
   const time = moment().tz("Asia/Dhaka").format("DD/MM/YYYY || HH:mm:ss");
+
   const threadInfo = await api.getThreadInfo(event.threadID);
   const groupName = threadInfo.threadName;
-  const userName = await Users.getNameUser(event.leftParticipantFbId);
+
+  let name = "একজন গোপন সদস্য";
+  try {
+    const info = await api.getUserInfo(event.leftParticipantFbId);
+    name = info[event.leftParticipantFbId].name || name;
+  } catch (e) {
+    console.log("❌ ইউজার নাম পাওয়া যায়নি:", e);
+  }
 
   const msg = `‎╭•┄┅══❁👹❁══┅┄•╮
 ❁═🌻${groupName}🌻═❁
@@ -32,8 +40,7 @@ module.exports.run = async ({ event, api, Users, Threads }) => {
 ╰•┄┅══❁🌺❁══┅┄•╯
 
 ❁═❁🌻AR BOT🌻❁═❁
-😥...Good 𝙉𝙞𝙜𝙝𝙩 || ${time}`;
+😥...Good Byee || ${time}`;
 
-  // Send message
   return api.sendMessage(msg, event.threadID);
 };
