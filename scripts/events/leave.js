@@ -1,30 +1,39 @@
 module.exports.config = {
-	name: "leave",
-	eventType: ["log:unsubscribe"],
-	version: "1.0.0",
-	credits: "Nayan",
-	description: "notify leave.",
+  name: "leave",
+  eventType: ["log:unsubscribe"],
+  version: "1.0.0",
+  credits: "Rakib Boss",
+  description: "Sends a custom leave message when someone leaves the group"
 };
 
-module.exports.run = async function({ api, event, Users, Threads }) {
-	if (event.logMessageData.leftParticipantFbId == api.getCurrentUserID()) return;
-	const { createReadStream, existsSync, mkdirSync } = global.nodemodule["fs-extra"];
-	const { join } =  global.nodemodule["path"];
-	const { threadID } = event;
-	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
-	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "লিভ নেউয়ার জন্য ধন্যবাদ 🤢" : "Kicked by Administrator";
-	const path = join(__dirname, "nayan", "leaveGif");
-	const gifPath = join(path, `l.gif`);
-	var msg, formPush
+module.exports.run = async ({ event, api, Users, Threads }) => {
+  const moment = require("moment-timezone");
+  const time = moment().tz("Asia/Dhaka").format("DD/MM/YYYY || HH:mm:ss");
+  const threadInfo = await api.getThreadInfo(event.threadID);
+  const groupName = threadInfo.threadName;
+  const userName = await Users.getNameUser(event.leftParticipantFbId);
 
-	if (existsSync(path)) mkdirSync(path, { recursive: true });
+  const msg = `‎╭•┄┅══❁👹❁══┅┄•╮
+❁═🌻${groupName}🌻═❁
+╰•┄┅══❁👹❁══┅┄•╯
 
-	(typeof data.customLeave == "undefined") ? msg = "তুই {name} গ্রুপে থাকার যোগ্য না আবাল .\n\n{type} " : msg = data.customLeave;
-	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type);
+⚜️ ${userName} ⚜️
 
-	if (existsSync(gifPath)) formPush = { body: msg, attachment: createReadStream(gifPath) }
-	else formPush = { body: msg }
-	
-	return api.sendMessage(formPush, threadID);
-}
+●▬๑۩ বউত বন্ডামি করিয়া থাকছো, আর থাকার দরকার নায়✨✨ 
+
+🥵👉🏻  ${userName}  👈🏻🥵
+☝️🦵সয়তানরে লাত্তি দিয়া বার কর 🦵🖕
+
+●▬๑۩ তুমরার জানা মতে ইগু ভালা না বাদ আছিল, কইয়া জাউ🤔🤔
+
+
+‎╭•┄┅══❁🌺❁══┅┄•╮
+ 🌹 -Made by RAKIB-🌹
+╰•┄┅══❁🌺❁══┅┄•╯
+
+❁═❁🌻AR BOT🌻❁═❁
+😥...Good 𝙉𝙞𝙜𝙝𝙩 || ${time}`;
+
+  // Send message
+  return api.sendMessage(msg, event.threadID);
+};
