@@ -1,4 +1,4 @@
-name: Nayan-Bot
+name: AR-AI-Bot
 
 on:
   push:
@@ -22,5 +22,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Nayan-Bot
+      - name: AR-AI-Bot
         run: npm start
