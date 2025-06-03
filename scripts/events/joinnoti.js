@@ -1,6 +1,6 @@
 module.exports = {
   config: {
-    name: "joinnoti",
+    name: "join",
     eventType: ["log:subscribe"],
     version: "2.0.0",
     credits: "RAKIB BOSS",
