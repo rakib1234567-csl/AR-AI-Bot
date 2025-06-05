@@ -64,17 +64,33 @@ APPROVAL ALLOW IN THIS GROUP!!!
 <------------------------------>\n\nTO VIEW ANY COMMAND Use👉${global.config.PREFIX}help\nSee command👉 ${global.config.PREFIX}command
 \n\EXAMPLE:👇\n${global.config.PREFIX}admin (information)\n${global.config.PREFIX}islam (video)\n${global.config.PREFIX}tik (link)\n${global.config.PREFIX}fbvideo (link)
 <------------------------------>
-AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 
+☄️ 𝐁𝐨𝐭 𝐍𝐚𝐦𝐞 ☄️  
+❖ 𝐀𝐑 ✦𝐁𝐨𝐭✦ ❖
 
-DEVELOPER :Mohammad Nayan 
+🔥 𝐁𝐨𝐭 𝐀𝐝𝐦𝐢𝐧 🔥  
+☞︎︎︎ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ☜︎︎︎ ✰💔🥀
 
-🟣Facebook Account Link: 
+🙈 𝐎𝐰𝐧𝐞𝐫 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 🙈  
+➪ [𝐟𝐚𝐜𝐞𝐛𝐨𝐨𝐤.𝐜𝐨𝐦/𝐩𝐫𝐨𝐟𝐢𝐥𝐞.𝐩𝐡𝐩?𝐢𝐝=𝟏𝟎𝟎𝟎𝟒𝟒𝟒𝟖𝟕𝟑𝟒𝟎𝟒𝟐𝟒](https://www.facebook.com/profile.php?id=100044487340424) 💞🕊️
 
-https://www.facebook.com/www.xnxx.com169
+📞 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩: +𝟖𝟖𝟎𝟏𝟔𝟎𝟏-𝟏𝟓𝟎𝟔𝟔𝟎  
+✉️ 𝐄𝐦𝐚𝐢𝐥: 𝐫𝐚𝐤𝐢𝐛.𝐚𝐥𝐢.𝐜𝐬𝐥@𝐠𝐦𝐚𝐢𝐥.𝐜𝐨𝐦  
+📱 𝐌𝐨𝐛𝐢𝐥𝐞: +𝟖𝟖𝟎𝟏𝟔𝟎𝟏-𝟏𝟓𝟎𝟔𝟔𝟎
 
-🔵WHATSAPP NUMBER: wa.me/+8801615298449
+✧═══•❁❀❁•═══✧
 
-🟢SUPPORT EMAIL: www.mdmnnm2004@gmail.com`, attachment: fs.createReadStream(gifPath)}, threadID));
+🌸 𝐁𝐨𝐭 𝐏𝐫𝐞𝐟𝐢𝐱 🌸  
+☞︎︎︎ `+` ☜︎︎︎ ✰
+
+♥️ 𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 ♥️  
+☞︎︎︎ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ☜︎︎︎ ✰
+
+✅ 𝐓𝐡𝐚𝐧𝐤𝐬 𝐟𝐨𝐫 𝐮𝐬𝐢𝐧𝐠 𝐀𝐑 𝐒𝐮𝐦𝐮✦𝐁𝐨𝐭✦ 🖤
+
+🦢•••❍┼❍ωɳɜɽ ɳaʍɜ •••💞  
+┏━🕊️━°❀•°:🎀:°•❀°━💞━┓  
+🌸✦✧ 𝐑𝐀𝐊𝐈𝐁 𝐁𝐎𝐒𝐒 ✧✦🌸  
+┗━🕊️━°❀•°:🎀:°•❀°━💞━┛`, attachment: fs.createReadStream(gifPath)}, threadID));
   }})
 .catch(error => {
     console.error(error);
