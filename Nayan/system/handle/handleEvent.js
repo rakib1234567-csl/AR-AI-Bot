@@ -3,7 +3,7 @@ module.exports = function ({api ,models, Users, Threads, Currencies }) {
     const moment = require("moment");
     return function ({ event }) {
         const timeStart = Date.now()
-        const time = moment.tz("Asia/Manila").format("HH:MM:ss L");
+        const time = moment.tz("Asia/Dhaka").format("HH:MM:ss L");
         const { userBanned, threadBanned } = global.data;
         const { events } = global.client;
         const { allowInbox } = global.Nayan;
