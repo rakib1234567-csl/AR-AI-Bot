@@ -64,6 +64,11 @@
       "storage": "datasqlite/nayan.sqlite"
     }
   },
+  "joinNoti": {
+    "autoUnsend": true,
+    "sendNoti": true,
+    "timeToUnsend": 150
+  },
   "leave": {
     "status": true,
     "number": 150
