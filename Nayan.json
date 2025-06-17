@@ -2,7 +2,7 @@
   "author": "Nayan",
   "autoRestart": true,
   "accpetPending": false,
-  "developermode": false,
+  "developermode": true,
   "language": "en",
   "notification": false,
   "approval": false,
